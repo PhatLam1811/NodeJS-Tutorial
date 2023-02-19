@@ -21,3 +21,17 @@ Client-Server: Client request - Server response (HTML, CSS, JS...)
 Web domain: tên miền (với user); địa chỉ IP (với máy tính)
 
 Port của localhost: phân biệt web đang code với các chương trình khác đang cùng sử dụng localhost
+
+CLI: Command Line Interface
+
+NPM (Node Package Manager): trình quản lý thư viện khi sử dụng NodeJS
+
+npm init: Tạo package.json: file khai báo package (thư viện)
+
+package-lock.json: file khai báo chi tiết package đã cài đặt (tự tạo)
+
+node_modules: 
+	- Thư mục chứa các package được cài đặt
+	- Không push lên remote vì phụ thuộc vào môi trường mỗi máy và version code
+
+Express: back-end framework nodejs cho web app
