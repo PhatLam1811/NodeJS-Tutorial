@@ -2,7 +2,7 @@ Node JS là gì?
 	- Môi trường thực thi (runtime environment)
 	- Nền tảng hỗ trợ code JavaScript ở phía server
 
-Engine V8
+Engine V8:
 	- Engine open-source phát triển bời Google
 	- Hỗ trợ dịch JavaScript về C++ và Assembly và ngược lại
 	=> Giúp code JavaScript ở phía server
@@ -34,4 +34,4 @@ node_modules:
 	- Thư mục chứa các package được cài đặt
 	- Không push lên remote vì phụ thuộc vào môi trường mỗi máy và version code
 
-Express: back-end framework nodejs cho web app
+Express: open-source back-end framework nodejs cho web app
