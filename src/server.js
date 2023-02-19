@@ -1,8 +1,11 @@
 import express from "express";
 import configurate from "./configs/viewEngine.js";
+import { config } from "dotenv";
+
+config();
 
 const app = express();
-const port = 6130;
+const port = process.env.port || 3000;
 
 configurate(app);
 
