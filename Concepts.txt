@@ -35,3 +35,5 @@ node_modules:
 	- Không push lên remote vì phụ thuộc vào môi trường mỗi máy và version code
 
 Express: open-source back-end framework nodejs cho web app
+
+View Engines: hỗ trợ xử lí logic cho html
