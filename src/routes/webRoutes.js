@@ -6,10 +6,10 @@ const router = express.Router();
 
 const initWebRoute = (app) => {
 
-    app.get(`/`, homePage);
-    app.get(`/about`, aboutPage);
+    router.get(`/`, homePage);
+    router.get(`/about`, aboutPage);
 
-    app.use(`/`, router)
+    app.use(`/`, router);
 }
 
-export default initWebRoute
+export default initWebRoute;
