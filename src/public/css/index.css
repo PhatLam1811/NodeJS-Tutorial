@@ -78,3 +78,9 @@ tr:nth-child(even) {
 .content {
     padding: 2rem;
 }
+
+.avatar {
+    box-shadow: 5px 5px 5px #333;
+    width: 240px;
+    height: 240px;
+}

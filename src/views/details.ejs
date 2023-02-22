@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>NodeJs Tutorial</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="\">Home</a></li>
+        <li><a href="\about">About</a></li>
+    </ul>
+
+    <div class="banner">
+        <img src="/images/banner3.jpg" alt="image" />
+    </div>
+
+    <h1 style="font-size: 3em; padding-left: 20rem; padding-top: 1rem">User Info</h1>
+
+    <div class="content" style="display: flex; font-size: 2em; justify-content: center; padding: 0rem;">
+        <img class="avatar" src="/images/default_avatar.jpg" alt="avatar" />
+
+        <div style="width: 80px;"></div>
+
+        <div>
+            <p><b>First Name: </b>
+                <%=user.firstName %>
+            </p>
+            <p><b>Email: </b>
+                <%=user.email %>
+            </p>
+        </div>
+
+        <div style="width: 50px;"></div>
+
+        <div>
+            <p><b>Last Name: </b>
+                <%=user.lastName %>
+            </p>
+            <p><b>Address: </b>
+                <%=user.address %>
+            </p>
+        </div>
+
+        <div style="width: 100px;"></div>
+    </div>
+</body>
+
+</html>
