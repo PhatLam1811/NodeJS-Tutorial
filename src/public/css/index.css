@@ -116,3 +116,27 @@ form button[type=submit] {
     font-weight: bold;
     font-size: 1em;
 }
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.user-actions a {
+    margin-right: 1rem;
+}
+
+.user-actions form {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    margin: 0rem 1rem;
+}
+
+.user-actions form button[type=submit] {
+    width: fit-content;
+    height: fit-content;
+    font-size: large;
+    margin: 0rem;
+}

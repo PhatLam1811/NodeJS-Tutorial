@@ -9,6 +9,8 @@ export const homePage = async (req, res) => {
 
 // GET
 export const detailsPage = async (req, res) => {
+    // console.log(userId);
+
     // get user id from request
     const userId = req.params.userId;
 
@@ -20,11 +22,28 @@ export const detailsPage = async (req, res) => {
 
 // POST
 export const createUser = async (req, res) => {
-    console.log('post requested: ', req.body);
+    // console.log('create user request body: ', req.body);
 
     let { firstName, lastName, email, address } = req.body;
     await connection.execute('insert into Users (firstName, lastName, email, address) values (?, ?, ?, ?)',
         [firstName, lastName, email, address]);
+
+    return res.redirect('/');
+}
+
+// POST
+export const deleteUser = async (req, res) => {
+    console.log('delete user request body: ', req.body);
+
+    let userId = req.body.userId;
+    await connection.execute(`delete from Users where _id=${userId}`);
+
+    return res.redirect('/');
+}
+
+// POST
+export const editUser = async (req, res) => {
+    console.log('edit user request body: ', req.body);
 
     return res.redirect('/');
 }
