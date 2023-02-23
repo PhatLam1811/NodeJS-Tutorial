@@ -42,8 +42,7 @@
                     <td>
                         <div class="user-actions">
                             <a href="/details/user/<%=usersData[i]._id %>">Details</a>
-                            <form action="/edit-user" method="post">
-                                <input type="text" name="userId" hidden="true" value="<%=usersData[i]._id %>" />
+                            <form action="/edit/user/<%=usersData[i]._id %>" method="get">
                                 <button type="submit">Edit</button>
                             </form>
                             <form action="/delete-user" method="post">
