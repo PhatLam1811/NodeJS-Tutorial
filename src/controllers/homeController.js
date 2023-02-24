@@ -1,4 +1,5 @@
 import connection from "../configs/dbSettings.js"
+import path from "path";
 
 // GET
 export const homePage = async (req, res) => {
@@ -46,7 +47,7 @@ export const createUser = async (req, res) => {
 
 // POST
 export const deleteUser = async (req, res) => {
-    console.log('delete user request body: ', req.body);
+    // console.log('delete user request body: ', req.body);
 
     let userId = req.body.userId;
     await connection.execute(`delete from Users where _id=${userId}`);
@@ -66,8 +67,16 @@ export const editUser = async (req, res) => {
         address
     } = req.body;
 
-    await connection.execute('update Users set firstName = ?, lastName = ?, email = ?, address = ? where _id = ?',
-        [firstName, lastName, email, address, id]);
+    if (req.file) {
+        let avatar = `user_${id}_avatar` + path.extname(req.file.originalname);
+
+        await connection.execute('update Users set firstName = ?, lastName = ?, avatar = ?, email = ?, address = ? where _id = ?',
+            [firstName, lastName, avatar, email, address, id]);
+    }
+    else {
+        await connection.execute('update Users set firstName = ?, lastName = ?, email = ?, address = ? where _id = ?',
+            [firstName, lastName, email, address, id]);
+    }
 
     return res.redirect('/');
 }

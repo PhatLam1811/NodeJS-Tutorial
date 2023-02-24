@@ -15,14 +15,18 @@
     </ul>
 
     <div class="banner">
-        <img src="/images/banner4.jpg" alt="image" />
+        <img src="/images/banners/banner4.jpg" alt="image" />
     </div>
 
     <div class="content">
-        <form action="/edit-user" method="POST">
+        <form action="/edit-user" method="post" enctype="multipart/form-data">
             <h1 style="margin: 3rem auto 3rem auto; width: fit-content;">Change User Info</h1>
 
             <input type="text" name="id" value="<%=user._id %>" hidden="true" />
+
+            <img class="avatar" src="/images/avatars/<%=user.avatar %>" alt="avatar"
+                style="display: block; margin: 1rem auto;" />
+            <input type="file" id="avatar" name="avatar" style="margin-top: 1rem;" />
 
             <label for="firstName"><b>First Name</b></label><br>
             <input type="text" id="firstName" name="firstName" value="<%=user.firstName %>" /><br>
